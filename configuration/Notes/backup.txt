@@ -1,0 +1,25 @@
+https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/starting-interacting-with-rman-client.html#GUID-7CB295E4-C934-4C87-A08E-7E502C8AD9AA
+
+
+https://orahow.com/rman-06817-pluggable-database-cannot-be-backed-up/
+
+# Log onto the instance
+archive log list;
+
+# RMAN backup
+rman target /
+
+
+run {
+  CONFIGURE DEVICE TYPE DISK PARALLELISM 2 BACKUP TYPE TO BACKUPSET;
+  CONFIGURE CHANNEL DEVICE TYPE DISK FORMAT 'D:\\ORCL_BACKUP\\RASDEV\\%U';
+ BACKUP PLUGGABLE DATABASE RAS, RAS_STG;
+  backup current controlfile;
+  backup spfile;
+}
+
+run {
+shutdown immediate
+startup mount
+backup database;
+}

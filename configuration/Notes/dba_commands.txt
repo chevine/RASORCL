@@ -1,0 +1,60 @@
+-- Kill a spid
+SET LINESIZE 150
+COLUMN spid FORMAT A10
+COLUMN username FORMAT A30
+COLUMN program FORMAT A45
+
+SELECT s.inst_id,
+       s.sid,
+       s.serial#,
+       s.sql_id,
+       p.spid,
+       s.username,
+       s.program
+FROM   gv$session s
+       JOIN gv$process p ON p.addr = s.paddr AND p.inst_id = s.inst_id
+WHERE  s.type != 'BACKGROUND';
+
+ALTER SYSTEM CANCEL SQL 'SID, SERIAL[, @INST_ID][, SQL_ID]';
+
+=============================================================================
+Find Blocking Sessions
+https://www.oraclerecipes.com/monitoring/find-blocking-sessions
+
+http://www.dba-oracle.com/t_find_blocking_sessions.htm
+
+select
+   blocking_session,
+   sid,
+   serial#,
+   wait_class,
+   seconds_in_wait
+from
+   v$session
+where
+   blocking_session is not NULL
+order by
+   blocking_session;
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+

@@ -1,0 +1,48 @@
+https://www.thegeekstuff.com/2013/08/oracle-rman-backup/
+http://logic.edchen.org/how-to-resolve-rman-06149/
+https://www.techpaste.com/2016/10/rman-06149-cannot-backup-database-noarchivelog-mode/
+https://dbatricksworld.com/how-to-backup-database-in-archivelog-and-noarchivelog-mode-with-rman-backup-utility-rman-part-2/
+
+
+
+
+
+
+rman target /
+
+show all;
+
+CONFIGURE CHANNEL DEVICE TYPE DISK FORMAT '/backup/rman/full_%u_%s_%p';
+
+
+
+
+
+
+
+
+====================================================================
+BACKUP AS BACKUPSET DATABASE PLUS ARCHIVELOG;
+
+RMAN> BACKUP AS BACKUPSET DATABASE PLUS ARCHIVELOG;
+
+
+Starting backup at 17-NOV-18
+Oracle error from target database:
+ORA-00258: manual archiving in NOARCHIVELOG mode must identify log
+
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: SID=148 device type=DISK
+specification does not match any archived log in the repository
+backup cancelled because there are no files to backup
+Finished backup at 17-NOV-18
+
+Starting backup at 17-NOV-18
+using channel ORA_DISK_1
+RMAN-00571: ===========================================================
+RMAN-00569: =============== ERROR MESSAGE STACK FOLLOWS ===============
+RMAN-00571: ===========================================================
+RMAN-03002: failure of backup plus archivelog command at 11/17/2018 22:20:46
+RMAN-06149: cannot BACKUP DATABASE in NOARCHIVELOG mode
+
+

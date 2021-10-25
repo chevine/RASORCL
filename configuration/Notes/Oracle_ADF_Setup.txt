@@ -1,0 +1,195 @@
+=======================================================================================================
+1. Create a view link between SUMMARIZE_LANDLORDS_BY_COUNTY_VW and SUMMARIZE_LANDLORDS_BY_CITY_VW
+SummarizeLandlordsByCountyVwToSummarizeLandlordsByCityVwViewLink
+
+2. Create a view link between SUMMARIZE_LANDLORDS_BY_CITY_VW and SUMMARIZE_LANDLORD_INFO_BY_CITY_VW
+SummarizeLandlordsByCityVwToSummarizeLandlordInfoByCityVwViewLink
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_LANDLORDS_BY_CITY_VW and SUMMARIZE_LANDLORD_INFO_BY_CITY_VW
+SummarizeLandlordsByCityToSummarizeLandlordInfoByCityViewLink
+
+2. Create a view link between SUMMARIZE_LANDLORD_INFO_BY_CITY_VW and LANDLORD_PROPERTIES_BY_CITY_VW
+SummarizeLandlordInfoByCityVwToLandlordPropertiesByCityVwViewLink
+
+3. Create a view link between LANDLORD_PROPERTIES_BY_CITY_VW and PROPERTY_VIOLATION_VW
+LanlordPropertiesByCityVwToPropertyViolationVwViewLink
+
+4. Create a view link between LANDLORD_PROPERTIES_BY_CITY_VW and TENANT_PROFILE_VW
+LandlordPropertiesByCityVwToTenantProfileVwViewLink
+
+5. Create a view link between SUMMARIZE_LANDLORD_INFO_BY_CITY_VW and ???
+=======================================================================================================
+1. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_STATE_VW and SUMMARIZE_RENTAL_PROPERTIES_BY_COUNTY_VW
+SummarizeRentalPropertiesByStateVwToSummarizeRentalPropertiesByCountyVwViewLink
+
+2. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_COUNTY_VW and SUMMARIZE_RENTAL_PROPERTIES_BY_CITY_VW
+
+
+3. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_CITY_VW and RENTAL_PROPERT_INFO_VW
+
+4. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_CITY_VW and LANDLORD_PROPERTIES_BY_CITY_VW
+
+5. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_CITY_VW and PROPERTIES_WITH_TENANTS_VW
+RentalPropertyInfoVwtoPropertiesWithTenantsVwViewLink
+
+6. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_CITY_VW and ???
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_TENANTS_BY_COUNTY_VW and SUMMARIZE_TENANTS_BY_CITY_VW
+SummarizeTenantsByCountyVwToSummarizeTenantsByCityVwViewLink
+
+2. Create a view link between SUMMARIZE_TENANTS_BY_CITY_VW and TENANT_PROFILE_VW
+SummarizeTenantsByCityVwToTenantProfileVwViewLink
+
+3. Create a view link between ??? and ???
+
+4. Create a view link between ??? and ???
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_STATE_VW and SUMMARIZE_RENTAL_PROPERTIES_BY_COUNTY_VW
+
+2. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_COUNTY_VW and SUMMARIZE_RENTAL_PROPERTIES_BY_CITY_VW
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_PROPERTIES_BY_STATE_VW and SUMMARIZE_PROPERTIES_BY_COUNTY_VW
+SummarizePropertiesByStateVwToSummarizePropertiesByCountyVw
+
+2. Create a view link between SUMMARIZE_PROPERTIES_BY_COUNTY_VW and SUMMARIZE_PROPERTIES_BY_CITY_VW
+SummarizePropertiesByCountyVwToSummarizePropertiesByCityVw
+
+3. Create a view link between SUMMARIZE_PROPERTIES_BY_CITY_VW and SUMMARIZE_PROPERTIES_WITH_TENANTS_BY_PROPERTY_VW
+SummarizePropertiesByCityVwToSummarizePropertiesWithTenantsByPropertyVw
+
+4. Create a view link between SUMMARIZE_PROPERTIES_WITH_TENANTS_BY_PROPERTY_VW and PROPERTY_INFO_VW
+SummarizePropertiesWithTenantsByPropertyVwToPropertyInfoVw
+
+=======================================================================================================
+
+=======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_COUNTY to SUMMARIZE_RENTAL_PROPERTY_BY_MUNICIPALITY
+
+2. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_COUNTY and SUMMARIZE_RENTAL_PROPERTIES_BY_CITY
+
+3. Create a view link between RENTAL_PROPERTY_INFO_VW to SUMMARIZE_LANDLORDS_BY_PROPERTY_VW
+
+4. Create a view link between RENTAL_PROPERTY_INFO_VW to TENANT_PROFILE_VW
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_LANDLORDS_BY_COUNTY_VW and SUMMARIZE_LANDLORDS_BY_CITY_VW
+
+2. Create a view link between SUMMARIZE_LANDLORDS_BY_CITY_VW and LANDLORD_PROPERTIES_BY_CITY
+
+3. Create a view link between SUMMARIZE_LANDLORDS_BY_CITY_VW and SUMMARIZE_LANDLORD_INFO_BY_CITY_VW
+
+=======================================================================================================
+1. Create a view link between SUMMARIZE_TENANTS_BY_COUNTY_VW and SUMMARIZE_TENANTS_BY_CITY
+
+2. Create a view link between SUMMARIZE_TENANTS_BY_CITY and TENANT_PROFILE_VW
+
+3.
+=======================================================================================================
+1. http://www.catgovind.com/adf/integrate-adf-utils-jsfutil-adfutil-adfapplication/
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Create a view link between RAS.RAS_MUNICIPALITY to RAS.RAS_RENTAL_PROPERTIES_BY_CITY
+RasMunicipalityView.State -> RasRentalPropertiesByCityView.StateCode
+RasMunicipalityView.County -> RasRentalPropertiesByCityView.County
+RasMunicipalityView.Municipality -> RasRentalPropertiesByCityView.Municipality
+
+2. Create a view link between RAS.RAS_STATE_COUNTY to RAS.RAS_AUDIT_VIOLATIONS_BY_CITY
+RasStateCounty.State -> RasAuditViolationsByCity.State
+RasStateCounty.County -> RasAuditViolationsByCity.County
+RasStateCounty.Municipality -> RasAuditViolationsByCity.Municipality
+
+3. Create a view link between SUMMARIZE_RENTAL_PROPERTIES_BY_CITY to LANDLORD_PROPERTIES_BY_CITY
+
+4. View instance link  for RasStateView
+RasStateView
+    RasStateCounty
+        RasAuditViolationsByCity
+        RasSummarizeRentalPropertiesByCity
+5. View instance link for SummarizeRentalPropertiesByCity
+SummarizeRentalPropertiesByCity
+    LandlordPropertiesByCity
+
+6. Create a view link between RENTAL_PROPERTY_INFO_VW to PROPERTY_VIOLATION_VW
+
+7.
+
+8.
+
+9.
+
+10.
+
+11.
+
+12.
+
+
+
+

@@ -1,0 +1,18 @@
+1. There are duplicate entries in RAS.RAS_PROPERTY
+select tax_year, property_id, count(*)
+from ras.RAS_PROPERTY
+group  by tax_year, property_id
+having count(*) > 1
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+

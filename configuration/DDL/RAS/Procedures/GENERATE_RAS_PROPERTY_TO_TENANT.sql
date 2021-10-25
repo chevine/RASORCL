@@ -1,0 +1,35 @@
+INSERT INTO RAS.RAS_PROPERTY_TO_TENANT(
+TAX_YEAR
+, TENANT_TAX_ID
+, PROPERTY_ID
+, TOTAL_RENTAL_PAYMENTS
+, STATE
+, MUNICIPALITY_CODE
+)
+SELECT
+  rif.TAX_YEAR
+, rif.TAXID
+, prop.PROPERTY_ID
+, landlord_property_income() AS TOTAL_RENTAL_PAYMENTS
+, prop.STATE
+, prop.MUNICIPALITY_CODE
+FROM (
+    SELECT rownum AS rif_rownum
+    , rif.TAX_YEAR
+    , rif.TAXID
+    FROM RAS.RAS_INDIVIDUAL_FILER rif
+    LEFT JOIN RAS.RAS_PROPERTY_TO_TENANT rptt ON (rptt.TAX_YEAR = rif.TAX_YEAR AND rptt.TENANT_TAX_ID = rif.TAXID)
+    WHERE rif.IS_TENANT = 'Y'
+    AND rptt.PROPERTY_ID IS NULL
+) rif
+JOIN (
+    SELECT rownum AS prop_rownum
+    , rp.TAX_YEAR
+    , rp.property_id
+    , rp.STATE
+    , rp.MUNICIPALITY_CODE
+    FROM RAS.RAS_PROPERTY rp
+    LEFT JOIN RAS.RAS_PROPERTY_TO_TENANT rptt ON (rptt.TAX_YEAR = rp.TAX_YEAR AND rptt.PROPERTY_ID = rp.PROPERTY_ID)
+    WHERE rptt.PROPERTY_ID IS NULL
+) prop ON (rif.rif_rownum = prop.prop_rownum)
+FETCH NEXT 100000 ROWS ONLY

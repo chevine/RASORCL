@@ -1,0 +1,22 @@
+create or replace PROCEDURE Generate_Rental_Income_Tenant_Payments 
+(
+  P_TAX_YEAR IN VARCHAR2 DEFAULT '1900' 
+) AS 
+BEGIN
+    -- Reset the rental income to zero
+    UPDATE RAS.RAS_PROPERTY
+    SET RENTAL_INCOME_RECEIVED = landlord_property_income()
+    WHERE TAX_YEAR = P_TAX_YEAR
+    AND RENTAL_INCOME_RECEIVED = 0;
+
+    -- Reset the tenant payments to zero
+    MERGE INTO RAS.RAS_PROPERTY_TO_TENANT rptt
+    USING RAS.RAS_PROPERTY rp
+    ON (rp.TAX_YEAR = P_TAX_YEAR AND rp.TAX_YEAR = rptt.TAX_YEAR AND rp.PROPERTY_ID = rptt.PROPERTY_ID)
+    WHEN MATCHED THEN
+    UPDATE SET rptt.TOTAL_RENTAL_PAYMENTS = rp.RENTAL_INCOME_RECEIVED
+    WHERE
+    
+--    UPDATE RAS.RAS_TENANT_PAYMENT_HISTORY
+    
+END RESET_RENTAL_INCOME_TENANT_PAYMENTS;

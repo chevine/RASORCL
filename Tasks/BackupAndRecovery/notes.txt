@@ -1,0 +1,16 @@
+1. https://docs.oracle.com/database/121/ADMIN/cdb_mon.htm#ADMIN13719
+
+2. List all of the pluggable databases
+COLUMN PDB_NAME FORMAT A15
+SELECT PDB_ID, PDB_NAME, STATUS FROM DBA_PDBS ORDER BY PDB_ID;
+
+Moving a database to another system
+https://docs.oracle.com/en/database/oracle/oracle-database/19/admin/transporting-data.html#GUID-FA4AAD15-5305-45A9-9644-DB7D7DCD30D2
+
+
+https://localhost:5500/em/login
+
+https://docs.oracle.com/en/database/oracle/oracle-database/19/sutil/oracle-data-pump.html#GUID-501A9908-BCC5-434C-8853-9A6096766B5A
+
+cd D:\backup\Oracle\RAS.HOME\
+

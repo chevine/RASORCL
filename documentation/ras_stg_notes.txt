@@ -1,0 +1,7 @@
+1. 
+2. Execute audit_address_mismatch.sql to identify potential rental properties
+3. Execute POPULATE_RAS_LANDLORD.sql to generate the landlords
+4.
+5.
+6.
+7.

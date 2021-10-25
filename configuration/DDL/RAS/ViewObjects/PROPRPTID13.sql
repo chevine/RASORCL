@@ -1,0 +1,13 @@
+SELECT      
+    RAS_PROPERTY.taxYear taxYear,      
+    RAS_PROPERTY.propertyId propertyId,      
+    RAS_PROPERTY_DESCRIPTION.city city,      
+    RAS_PROPERTY_DESCRIPTION.state state,      
+    RAS_PROPERTY_DESCRIPTION.address address,      
+    RAS_PROPERTY_DESCRIPTION.zipCode zipCode,      
+    RAS_PROPERTY_DESCRIPTION.country country,      
+    SUM(RAS_PROPERTY.percentageOwned) percentageOwned      
+FROM      
+    RAS_PROPERTY JOIN RAS_PROPERTY_DESCRIPTION ON RAS_PROPERTY.taxYear = RAS_PROPERTY_DESCRIPTION.taxYear AND RAS_PROPERTY.propertyId = RAS_PROPERTY_DESCRIPTION.propertyId     
+GROUP BY RAS_PROPERTY.taxYear, RAS_PROPERTY.propertyId, RAS_PROPERTY_DESCRIPTION.city, RAS_PROPERTY_DESCRIPTION.state, RAS_PROPERTY_DESCRIPTION.address, RAS_PROPERTY_DESCRIPTION.zipCode, RAS_PROPERTY_DESCRIPTION.country   
+HAVING SUM(RAS_PROPERTY.percentageOwned) != 100

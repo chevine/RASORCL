@@ -1,0 +1,18 @@
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '1', 'Vacant Land' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '2', 'Residential' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '3A', 'Farm (Regular)' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '3B', 'Farm (Qualified' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '4A', 'Commercial' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '4B', 'Industrial' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '4C', 'Apartment' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '5A', 'Class I Railroad Property' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '5B', 'Class II Railroad Property' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '6A', 'Personal Property Telephone' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '6B', 'Machinery, Apparatus or Equipment of Petroleum Refineries' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '15A', 'Public School Property' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '15B', 'Other School Property' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '15C', 'Public Property' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '15D', 'Church & Charitable Property' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '15E', 'Cemeteries & Graveyards' );
+INSERT INTO RAS.RAS_PROPERTY_TYPE(property_Class, property_Description) VALUES( '15F', 'Other Exempt properties not included in the above classifications' );
+commit;

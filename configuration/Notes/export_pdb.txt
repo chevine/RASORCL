@@ -1,0 +1,7 @@
+https://oracle-base.com/articles/10g/oracle-data-pump-10g
+https://dbaclass.com/article/get-export-dump-pluggable-database/
+https://wikidba.com/2019/07/16/expdp-impdp-of-schemas-in-pdb/
+
+sqlplus RAS/Lucinda11@localhost:1521/RAS.HOME
+
+expdp RAS/Lucinda11@localhost:1521/RAS.HOME dumpfile=RAS_HOME_RAS_20210214.dmp logfile=RAS_HOME_RAS_20210214.log directory=RAS_DATA_PUMP_DIR SCHEMAS=RAS
